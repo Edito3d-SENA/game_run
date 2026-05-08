@@ -10,14 +10,16 @@ body {
 
 #game-container {
     width: 95vw;
-    max-width: 400px;
+    max-width: 360px;
     position: relative;
+    margin: auto;
 }
 
 canvas {
     display: block;
     width: 100%;
-    height: auto; /* Mantiene proporción 9:16 */
+    height: auto;
+    aspect-ratio: 9 / 16;
     background: #0f0f0f;
     border-radius: 20px;
     border: 3px solid #00ffcc;
