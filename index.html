@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SENA Bit-Runner V3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex align-items-center justify-content-center">
+
+    <div id="game-container" class="container-fluid">
+        <div id="ui" class="position-absolute w-100 p-2 d-flex justify-content-between align-items-start" style="z-index: 10;">
+            <div class="badge rounded-pill bg-dark text-info border border-info p-2">
+                LVL: <span id="level">1</span>
+            </div>
+            <div class="badge rounded-pill bg-dark text-warning border border-warning p-2">
+                ⏳ <span id="timer">30</span>s
+            </div>
+            <div class="badge rounded-pill bg-dark text-white border border-secondary p-2">
+                PTS: <span id="score">0</span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" class="w-100 shadow-lg"></canvas>
+    </div>
+
+    <div class="modal fade" id="gameOverModal" data-bs-backdrop="static" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-danger">
+                <div class="modal-header border-secondary text-center w-100">
+                    <h5 class="modal-title text-danger w-100">¡SISTEMA CAÍDO!</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="fs-4">Puntaje: <span id="finalScore" class="fw-bold text-info">0</span></p>
+                    <p class="text-secondary small">Solo tenías una vida. El código falló.</p>
+                </div>
+                <div class="modal-footer border-secondary justify-content-center">
+                    <button type="button" class="btn btn-outline-danger px-5" onclick="resetGame()">REBOOT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
